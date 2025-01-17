@@ -1,5 +1,8 @@
 package probs.array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ArrayProblem {
     ArrayProblem(){}
 
@@ -12,5 +15,13 @@ public class ArrayProblem {
             }
         }
         return k;
+    }
+
+    public int singleNumber(int[] nums) {
+        Map<Integer, Integer> maps = new HashMap<>();
+        for(int i : nums){
+            maps.put(i, maps.getOrDefault(i, 0) + 1);
+        }
+        return maps.keySet().stream().mapToInt(i -> i).filter(i -> maps.get(i) == 1).findFirst().orElse(-1);
     }
 }
