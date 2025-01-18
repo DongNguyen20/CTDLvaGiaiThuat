@@ -24,4 +24,17 @@ public class ArrayProblem {
         }
         return maps.keySet().stream().mapToInt(i -> i).filter(i -> maps.get(i) == 1).findFirst().orElse(-1);
     }
+
+    public int maxProfit(int[] prices) {
+        if(prices.length > 0) {
+            int minPrice = prices[0];
+            int maxProfit = 0;
+            for(int i = 1; i < prices.length; i++) {
+                minPrice = Math.min(minPrice, prices[i]);
+                maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+            }
+            return maxProfit;
+        }
+        return 0;
+    }
 }
