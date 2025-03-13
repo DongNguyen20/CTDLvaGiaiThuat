@@ -10,4 +10,11 @@ public class StringProblemTest {
         boolean result = StringProblem.isPalindrome(x);
         System.out.println("RESULT: " + result);
     }
+
+    public static void testMaxVowels() {
+        String s = "abciiidef";
+        int k = 3;
+        int result = StringProblem.maxVowels(s, k);
+        System.out.println("RESULT: " + result);
+    }
 }

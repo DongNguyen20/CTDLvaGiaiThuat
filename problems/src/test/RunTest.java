@@ -6,6 +6,9 @@ import test.string.StringProblemTest;
 public class RunTest {
     public static void main(String[] args) {
 //        ArrayProblemTest.testRemoveElement();
-        StringProblemTest.testPalindromeNumber();
+//        StringProblemTest.testPalindromeNumber()
+        ArrayProblemTest.testSuperDigit();
+//        StringProblemTest.testMaxVowels();
+
     }
 }
